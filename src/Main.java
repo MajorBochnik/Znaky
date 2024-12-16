@@ -4,33 +4,45 @@ public class Main {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         Znaky znaky = new Znaky();
-/*1.*/
-znaky.vypisAhoj();
+        System.out.println("Jaký úkol byste chtěl vybrat?");
+        int n = sc.nextInt();
 
-/*2*/
-String slovicko = sc.nextLine();
-System.out.println(znaky.vypisSlovo(slovicko));
+while(n > 0 && n <=8) {
 
-/*3*/
-znaky.vypisCislo();
+    switch (n) {
+        case 1:
+            znaky.vypisAhoj();
+            break;
+        case 2:
+            sc.nextLine();
+            String slovicko = sc.nextLine();
+            System.out.println(znaky.vypisSlovo(slovicko));
+            break;
+        case 3:
+            znaky.vypisCislo();
+            break;
+        case 4:
+            znaky.nasobPeti();
+            break;
+        case 5:
+            znaky.zjistiPrvocislo();
+            break;
+        case 6:
+            znaky.porovnaniCisel();
+            break;
+        case 7:
+            znaky.zadejJmeno();
+            break;
+        case 8:
+            znaky.intervalN();
+            break;
+        default:
+            System.out.println("NEEEEEEEE!");
+            break;
+    }
+    System.out.println("Jaký úkol byste chtěl vybrat?");
+    n = sc.nextInt();
+}
 
-/*4*/
-znaky.nasobPeti();
-
-/*5*/
-znaky.zjistiPrvocislo();
-
-/*6*/
-znaky.porovnaniCisel();
-
-/*7*/
-znaky.zadejJmeno();
-
-/*8*/
-znaky.intervalN();
-
-/*9*/
-
-/*10*/
     }
 }

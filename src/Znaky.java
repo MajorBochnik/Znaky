@@ -16,50 +16,54 @@ public class Znaky {
 /*3*/
     public void vypisCislo(){
         int cislo = sc.nextInt();
-        if(cislo < 0){
-            System.out.println("Bylo zadáno záporné číslo.");
-        }
-        else if (cislo == 0) {
-            System.out.println("0");
-        }
-        else if (cislo > 12) {
-            System.out.println("Moc velké číslo");
-        }
-        else if (cislo == 11) {
-            System.out.println("Jedenáct");
-        }
-        else if (cislo == 10) {
-            System.out.println("Deset");
-        }
-        else if (cislo == 9) {
-            System.out.println("Devět");
-        }
-        else if (cislo == 8) {
-            System.out.println("Osm");
-        }
-        else if (cislo == 7) {
-            System.out.println("Sedm");
-        }
-        else if (cislo == 6) {
-            System.out.println("Šest");
-        }
-        else if (cislo == 5) {
-            System.out.println("Pět");
-        }
-        else if (cislo == 4) {
-            System.out.println("Čtyři");
-        }
-        else if (cislo == 3) {
-            System.out.println("Tři");
-        }
-        else if (cislo == 2) {
-            System.out.println("Dva");
-        }
-        else if (cislo == 1) {
-            System.out.println("Jedna");
-        }
-        else if (cislo == 12) {
-            System.out.println("Dvanáct");
+
+        switch(cislo){
+            case 0:
+                System.out.println("Nula");
+                break;
+            case 1:
+                System.out.println("Jedna");
+                break;
+            case 2:
+                System.out.println("Dva");
+                break;
+            case 3:
+                System.out.println("Tři");
+                break;
+            case 4:
+                System.out.println("Čtyři");
+                break;
+            case 5:
+                System.out.println("Pět");
+                break;
+            case 6:
+                System.out.println("Šest");
+                break;
+            case 7:
+                System.out.println("Sedm");
+                break;
+            case 8:
+                System.out.println("Osm");
+                break;
+            case 9:
+                System.out.println("Devět");
+                break;
+            case 10:
+                System.out.println("Deset");
+                break;
+            case 11:
+                System.out.println("Jedenáct");
+                break;
+            case 12:
+                System.out.println("Dvanáct");
+                break;
+            default:
+                if(cislo < 0){
+                    System.out.println("Záporné číslo");
+                }
+                else {
+                    System.out.println("Moc velké číslo");
+                }
         }
     }
 
@@ -134,7 +138,6 @@ public class Znaky {
 /*7*/
     public void zadejJmeno(){
         System.out.println("Zadej jméno:");
-        sc.nextLine();
         String jmeno = sc.nextLine();
         System.out.println("Zadej příjmení:");
         String prijmeni = sc.nextLine();
